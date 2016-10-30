@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10">
+      <h1>{{title}}</h1>
+      <hr>
+      <a [routerLink]="['']">Component A</a> |
+      <input type="text" #id (input)="0">
+      <a [routerLink]="['compb', id.value]">Component B</a>
+      <hr>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
