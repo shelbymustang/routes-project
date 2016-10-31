@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { AppAComponent } from './app-a/app-a.component';
 import { AppBComponent } from './app-b/app-b.component';
 import { routerRoutes } from "./app.routing";
+import { EditComponent } from './app-b/edit-component/edit-component';
+import { DetailComponent } from './app-b/detail-component/detail-component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppAComponent,
-    AppBComponent
+    AppBComponent,
+    EditComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

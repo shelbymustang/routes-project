@@ -8,6 +8,7 @@ import {Subscription} from "rxjs";
     
       <h1>Component B - Value {{id}}</h1>
         <button (click)="onNavigate()">Goto Comp A</button>
+        <router-outlet></router-outlet>
   `,
   styles: []
 })
@@ -16,7 +17,7 @@ export class AppBComponent implements OnDestroy {
   id:string;
 
   onNavigate() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/'], {queryParams: {'testparm': 100}});
 
   }
 
