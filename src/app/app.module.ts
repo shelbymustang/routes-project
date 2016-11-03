@@ -9,6 +9,8 @@ import { AppBComponent } from './app-b/app-b.component';
 import { routerRoutes } from "./app.routing";
 import { EditComponent } from './app-b/edit-component/edit-component';
 import { DetailComponent } from './app-b/detail-component/detail-component';
+import { AppBGuard } from "./app-b/app-b.guard";
+import {AppAGuard} from "./app-a/app-a.guard";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { DetailComponent } from './app-b/detail-component/detail-component';
     HttpModule,
     routerRoutes
   ],
-  providers: [],
+  providers: [AppBGuard, AppAGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
